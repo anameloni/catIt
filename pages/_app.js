@@ -1,11 +1,32 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { MeowiStyles } from '../src/lib/Commons';
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+  
+  body {
+    font-family: sans-serif;
+    background-color: #FFFFC2;
+  }
+
+  #__next {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    
+  }
+
+  ${MeowiStyles}
 `
 
 const theme = {
